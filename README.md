@@ -1,27 +1,72 @@
-# SpeedTypingGame
+# Speed typing game
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.7.
+Simple speed typing game made with HTML, CSS and Angular.
 
-## Development server
+## Description
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Try to type the words as fast as you can. The game will start when you type the first letter. The game will end when you type the last letter of the last word. The game will show you the time it took to type all the words and the accuracy of your typing.
 
-## Code scaffolding
+## Getting Started
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## To-Do's
 
-## Build
+- [] Create a display box for a paragraph of text that the user will type
+- [] Create an input box for the user to type the displayed text
+- [] Highlight the character of the word users are currently typing (in the display box):
+    - [] GREEN - letter is correct
+    - [] RED - letter is wrong
+- [] Create a START button for the test to begin
+- [] Create a display box for the countdown timer
+    - [] Set a countdown time for each test
+    - [] Activate the timer when the user clicks on START    
+- [] When the timer runs out, display how many words the user typed per minute
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Optional To-Do's
 
-## Running unit tests
+- [] Create a drop down menu where the user can select the difficulty of the text (i.e. easy, medium, difficult). Based on the user’s selection, display the selected text.
+- [] Calculate the accuracy (%) of the user’s inputs
+- [] Give different words different weights: simple words like “a”, “the”, “an” etc. should weigh less than difficult words like “friendship” and “neighborhood”
+- [] Allow users to see only one line of text, rather than the entire paragraph
+- [] Create different types of tests for different use cases: text only, numbers only, emoji only, etc.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Dependencies
 
-## Running end-to-end tests
+* Describe any prerequisites, libraries, OS version, etc., needed before installing program.
+* ex. Windows 10
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### Installing
 
-## Further help
+* How/where to download your program
+* Any modifications needed to be made to files/folders
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Executing program
+
+* How to run the program
+* Step-by-step bullets
+```
+code blocks for commands
+```
+
+## Help
+
+Any advise for common problems or issues.
+```
+command to run if program contains helper info
+```
+
+## Authors
+
+Contributors names and contact info
+
+- lvonnied
+
+## Version History
+
+## License
+
+This project is licensed under the [NAME HERE] License - see the LICENSE.md file for details
+
+## Acknowledgments
+
+Inspiration, code snippets, etc.
+* [codementor](https://www.codementor.io/projects/web/speed-typing-game-c51led1afn)
