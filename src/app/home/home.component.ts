@@ -14,6 +14,7 @@ export class HomeComponent {
   userInput = '';
   map: { char: string; color: string }[] = [];
   accuracy = 0;
+  time = 30;
 
   constructor() {
     // Initialize the map array with the sample text
