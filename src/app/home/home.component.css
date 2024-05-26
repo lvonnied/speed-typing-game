@@ -1,0 +1,33 @@
+.correct {
+  color: green;
+}
+
+.incorrect {
+  color: red;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  height: 100vh;
+}
+
+.paragraph-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 25vh;
+}
+
+.statistics-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}

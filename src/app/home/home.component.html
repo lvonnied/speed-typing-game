@@ -1,0 +1,20 @@
+<div class='container'>
+  <div class='paragraph-container'>
+    <p>
+      <span *ngFor="let character of map; let i = index" [style.color]="map[i].color" style="white-space: pre;">
+        {{character.char}}
+      </span>
+    </p>
+  </div>
+  <div class='input-container'>
+    <form id='speedTypingForm'>
+      <input type='text' id="speedTypingInput" [(ngModel)]="userInput" (input)="compareInput()" name="typingInput" />
+    </form>
+  </div>
+
+  <div class="statistics-container">
+    <!--<p>Time: {{time}}</p>-->
+    <!--<p>WPM: {{wpm}}</p>-->
+    <p>Accuracy: {{accuracy}}%</p>
+  </div>
+</div>
