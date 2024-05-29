@@ -1,3 +1,12 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 .correct {
   color: green;
 }
@@ -7,21 +16,27 @@
 }
 
 .container {
-  display: grid;
-  grid-template-rows: auto 1fr;
-  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-.paragraph-container {
+.title-container {
+  flex: 0 1 auto;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
 }
 
-.input-container {
+.game-container {
+  flex: 1 1 auto;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  margin-bottom: 25vh;
+}
+
+.time-remaining-container {
+  display: flex;
+  justify-content: center;
 }

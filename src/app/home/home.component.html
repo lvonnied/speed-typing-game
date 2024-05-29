@@ -1,15 +1,27 @@
 <div class='container'>
-  <div class='paragraph-container'>
-    <p>
-      <span *ngFor="let character of map; let i = index" [style.color]="map[i].color" style="white-space: pre;">
-        {{character.char}}
-      </span>
-    </p>
+
+  <div class="title-container">
+    <h1>Speed Typing</h1>
+    <p>Remaining: {{time}} Seconds</p>
   </div>
-  <div class='input-container'>
-    <label for='typingInput'>Remaining: {{time}} Seconds</label>
-    <form id='speedTypingForm'>
-      <input type='text' id="speedTypingInput" [(ngModel)]="userInput" (input)="compareInput()" name="typingInput" />
-    </form>
+
+  <div class="game-container">
+
+    <div class="paragraph-container">
+      <p>
+        <span *ngFor="let character of map; let i = index" [style.color]="map[i].color" style="white-space: pre;">
+          {{character.char}}
+        </span>
+      </p>
+    </div>
+
+    <div class='input-container'>
+      <form id='speedTypingForm'>
+        <input type='text' id="speedTypingInput" [(ngModel)]="userInput" (input)="compareInput()" name="typingInput"
+          size="100" />
+      </form>
+    </div>
+
   </div>
+
 </div>
