@@ -15,7 +15,6 @@ import { StatisticsService } from '../_services/statistics.service';
   styleUrl: './home.component.css'
 })
 
-// TODO Move this to a service
 export class HomeComponent {
 
   private readonly TYPING_TIME = 30;
@@ -24,6 +23,7 @@ export class HomeComponent {
   map: { char: string; color: string }[] = [];
   time = this.TYPING_TIME;
   started = false;
+
   // ? Maybe this can be done differently
   interval: any = null;
 
