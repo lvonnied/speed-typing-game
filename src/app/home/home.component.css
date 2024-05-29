@@ -25,9 +25,3 @@
   flex-direction: column;
   margin-bottom: 25vh;
 }
-
-.statistics-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-}
