@@ -5,6 +5,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from '../modal/modal.component';
 import { SentencesService } from '../_services/sentences.service';
+import { StatisticsService } from '../_services/statistics.service';
 
 @Component({
   selector: 'app-home',
@@ -26,7 +27,10 @@ export class HomeComponent {
   // ? Maybe this can be done differently
   interval: any = null;
 
-  constructor(public dialog: MatDialog, private sentencesService: SentencesService) {
+  constructor(
+    public dialog: MatDialog,
+    private sentencesService: SentencesService,
+    private statisticsService: StatisticsService) {
     this.initializeObjectArray(sentencesService.GetRandomSentence());
   }
 
@@ -35,9 +39,9 @@ export class HomeComponent {
       width: '500px',
       height: '300px',
       data: {
-        accuracy: this.calculateAccuracy(),
+        accuracy: this.statisticsService.calculateAccuracy(this.userInput, this.map),
         time: this.time,
-        wpm: this.calculateWPM(),
+        wpm: this.statisticsService.calculateWPM(this.userInput, this.TYPING_TIME - this.time),
       },
     })
 
@@ -72,21 +76,6 @@ export class HomeComponent {
         this.map[i].color = 'red';
       }
     }
-  }
-
-  calculateAccuracy(): number {
-    let correct = 0;
-    for (let i = 0; i < this.map.length; i++) {
-      if (this.userInput[i] === this.map[i].char) {
-        correct++;
-      }
-    }
-    return Math.round((correct / this.map.length) * 100);
-  }
-
-  calculateWPM(): number {
-    const totalCharactersTyped = this.userInput.length;
-    return Math.round((totalCharactersTyped / 5) * (60 / (this.TYPING_TIME - this.time)));
   }
 
   setInterval(): void {
