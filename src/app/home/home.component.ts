@@ -31,7 +31,11 @@ export class HomeComponent {
     public dialog: MatDialog,
     private sentencesService: SentencesService,
     private statisticsService: StatisticsService) {
-    this.initializeObjectArray(this.sentencesService.GetRandomSentence());
+  }
+
+  async ngOnInit(): Promise<void> {
+    const sentence = await this.sentencesService.GetRandomSentence();
+    this.initializeObjectArray(sentence);
   }
 
   openDialog(): void {
@@ -45,9 +49,10 @@ export class HomeComponent {
       },
     });
 
-    dialogRef.afterClosed().subscribe(() => {
+    dialogRef.afterClosed().subscribe(async () => {
       this.time = this.TYPING_TIME;
-      this.initializeObjectArray(this.sentencesService.GetRandomSentence());
+      const sentence = await this.sentencesService.GetRandomSentence();
+      this.initializeObjectArray(sentence);
       this.userInput = '';
       this.started = false;
     });
@@ -71,7 +76,7 @@ export class HomeComponent {
 
     // Calculate the margin left
     const proportion = this.userInput.length / this.map.length;
-    const adjustmentFactor = 75;
+    const adjustmentFactor = 182;
     this.marginLeft = 50 - proportion * adjustmentFactor;
 
     for (let i = 0; i < this.map.length; i++) {
