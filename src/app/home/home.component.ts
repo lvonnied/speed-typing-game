@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { MatButtonModule } from '@angular/material/button';
@@ -21,17 +21,17 @@ export class HomeComponent {
 
   userInput = '';
   map: { char: string; color: string }[] = [];
-  time = this.TYPING_TIME;
-  started = false;
+  time: number = this.TYPING_TIME;
+  started: boolean = false;
+  marginLeft: number = 50;
 
-  // ? Maybe this can be done differently
   interval: any = null;
 
   constructor(
     public dialog: MatDialog,
     private sentencesService: SentencesService,
     private statisticsService: StatisticsService) {
-    this.initializeObjectArray(sentencesService.GetRandomSentence());
+    this.initializeObjectArray(this.sentencesService.GetRandomSentence());
   }
 
   openDialog(): void {
@@ -43,7 +43,7 @@ export class HomeComponent {
         time: this.time,
         wpm: this.statisticsService.calculateWPM(this.userInput, this.TYPING_TIME - this.time),
       },
-    })
+    });
 
     dialogRef.afterClosed().subscribe(() => {
       this.time = this.TYPING_TIME;
@@ -58,6 +58,7 @@ export class HomeComponent {
       char,
       color: 'black',
     }));
+    this.marginLeft = 50;
   }
 
   compareInput(): void {
@@ -67,6 +68,12 @@ export class HomeComponent {
     } else if (this.map.length === this.userInput.length) {
       this.resetGame(this.interval);
     }
+
+    // Calculate the margin left
+    const proportion = this.userInput.length / this.map.length;
+    const adjustmentFactor = 75;
+    this.marginLeft = 50 - proportion * adjustmentFactor;
+
     for (let i = 0; i < this.map.length; i++) {
       if (this.userInput[i] === undefined) {
         this.map[i].color = 'black';

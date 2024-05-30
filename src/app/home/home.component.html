@@ -8,7 +8,7 @@
   <div class="game-container">
 
     <div class="paragraph-container">
-      <p>
+      <p [style.marginLeft.%]="marginLeft" id="speedTypingText">
         <span *ngFor="let character of map; let i = index" [style.color]="map[i].color" style="white-space: pre;">
           {{character.char}}
         </span>
@@ -18,7 +18,7 @@
     <div class='input-container'>
       <form id='speedTypingForm'>
         <input type='text' id="speedTypingInput" [(ngModel)]="userInput" (input)="compareInput()" name="typingInput"
-          size="100" />
+          size="100" placeholder="Type the sentence above" />
       </form>
     </div>
 
