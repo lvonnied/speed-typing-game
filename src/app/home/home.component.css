@@ -43,6 +43,25 @@ body {
   justify-content: center;
 }
 
+.paragraph-container {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 2em;
+}
+
+.paragraph-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 50px;
+  pointer-events: none;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgb(218, 184, 169) 100%);
+  background: linear-gradient(to left, rgba(255, 255, 255, 0) 0%, rgb(218, 184, 169) 100%);
+}
+
 #speedTypingText {
   transition: margin-left 0.1s ease-in-out;
 }
@@ -50,7 +69,7 @@ body {
 
 #speedTypingInput {
   font-family: "Montserrat", Helvetica, sans-serif;
-  width: 400px;
+  width: 375px;
   border-radius: 30px;
   background-color: #123c69d5;
   outline: none;
