@@ -47,6 +47,7 @@ body {
   position: relative;
   overflow: hidden;
   margin-bottom: 2em;
+  width: 100em;
 }
 
 .paragraph-container::after {
