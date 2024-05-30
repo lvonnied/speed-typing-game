@@ -1,0 +1,35 @@
+mat-dialog-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    margin-top: 3em;
+    padding: 0;
+}
+
+button {
+    font-size: 1.2em;
+    margin-bottom: 1em;
+    border-radius: 30px;
+    width: 30%;
+    height: 80%;
+}
+
+mat-icon {
+    transform: scale(2);
+}
+
+div p {
+    font-size: 1.2em;
+    color: rgb(160, 57, 87);
+    margin-top: 3em;
+    text-align: center;
+}
+
+.accuracy-container,
+.wpm-container,
+.time-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
