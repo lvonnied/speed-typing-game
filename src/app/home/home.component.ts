@@ -44,8 +44,8 @@ export class HomeComponent {
       height: '300px',
       data: {
         accuracy: this.statisticsService.calculateAccuracy(this.userInput, this.map),
-        time: this.time,
-        wpm: this.statisticsService.calculateWPM(this.userInput, this.time),
+        time: (this.TYPING_TIME - this.time),
+        wpm: this.statisticsService.calculateWPM(this.userInput, (this.TYPING_TIME - this.time)),
       },
     });
 
