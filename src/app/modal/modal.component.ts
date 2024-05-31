@@ -1,7 +1,8 @@
 import { Component, Inject } from '@angular/core';
-import { MatDialogTitle, MatDialogContent, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatDialogTitle, MatDialogContent, MAT_DIALOG_DATA, MatDialogActions, MatDialogModule } from '@angular/material/dialog';
 import { MatButtonModule } from '@angular/material/button';
 import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
 
 export interface DialogData {
   accuracy: number;
@@ -12,7 +13,7 @@ export interface DialogData {
 @Component({
   selector: 'app-modal',
   standalone: true,
-  imports: [MatDialogContent, MatDialogTitle, MatButtonModule, CommonModule],
+  imports: [MatDialogContent, MatDialogTitle, MatButtonModule, CommonModule, MatIconModule, MatDialogActions, MatDialogModule],
   templateUrl: './modal.component.html',
   styleUrl: './modal.component.css'
 })
