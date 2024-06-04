@@ -31,7 +31,7 @@
 <br />
 <div align="center">
   <a href="https://github.com/lvonnied/speed-typing-game">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+    <img src="./src/assets/logo.png" alt="Logo" width="80" height="80">
   </a>
 
 <h3 align="center">speed-typing-game</h3>
