@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/app/modal/modal.component.css"],
+  "sourcesContent": ["mat-dialog-content {\n    display: flex;\n    align-items: center;\n    justify-content: space-evenly;\n    width: 100%;\n    margin-top: 3em;\n    padding: 0;\n}\n\nbutton {\n    font-size: 1.2em;\n    margin-bottom: 1em;\n    border-radius: 30px;\n    width: 30%;\n    height: 80%;\n}\n\nmat-icon {\n    transform: scale(2);\n}\n\ndiv p {\n    font-size: 1.2em;\n    color: rgb(160, 57, 87);\n    margin-top: 3em;\n    text-align: center;\n}\n\n.accuracy-container,\n.wpm-container,\n.time-container {\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n}"],
+  "mappings": ";AAAA;AACI,WAAS;AACT,eAAa;AACb,mBAAiB;AACjB,SAAO;AACP,cAAY;AACZ,WAAS;AACb;AAEA;AACI,aAAW;AACX,iBAAe;AACf,iBAAe;AACf,SAAO;AACP,UAAQ;AACZ;AAEA;AACI,aAAW,MAAM;AACrB;AAEA,IAAI;AACA,aAAW;AACX,SAAO,IAAI,GAAG,EAAE,EAAE,EAAE;AACpB,cAAY;AACZ,cAAY;AAChB;AAEA,CAAC;AACD,CAAC;AACD,CAAC;AACG,WAAS;AACT,kBAAgB;AAChB,eAAa;AACjB;",
+  "names": []
+}
