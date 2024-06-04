@@ -147,7 +147,7 @@ See the [open issues](https://github.com/lvonnied/speed-typing-game/issues) for 
 <!-- LICENSE -->
 ## License
 
-<!-- Distributed under the MIT License. See `LICENSE.txt` for more information. -->
+Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <!-- CONTACT -->
 ## Contact
