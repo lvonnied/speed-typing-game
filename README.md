@@ -83,7 +83,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<!-- [![Product Name Screen Shot][product-screenshot]](https://example.com) -->
+[![speed-typing-game Screen Shot][product-screenshot]](https://lvonnied.github.io/speed-typing-game/)
 
 ### Built With
 
@@ -178,7 +178,7 @@ Project Link: [https://github.com/lvonnied/speed-typing-game](https://github.com
 [license-url]: https://github.com/lvonnied/speed-typing-game/blob/master/LICENSE.txt
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/lucas-von-niederhäusern
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: /src/assets/screenshot.png
 [Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
 [Next-url]: https://nextjs.org/
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
