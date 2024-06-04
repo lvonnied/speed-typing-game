@@ -2,7 +2,9 @@
 
   <div class="title-container">
     <h1>Speed Typing</h1>
-    <p>Remaining: {{time}} Seconds</p>
+    <mat-progress-spinner [value]="(30-time) * 3.33" [mode]="mode" color="#123c69" diameter="150"
+      strokeWidth="6"></mat-progress-spinner>
+    <div style="position:relative; top: -83px; left: 1px;">{{time}}s</div>
   </div>
 
   <div class="game-container">
@@ -18,7 +20,7 @@
     <div class='input-container'>
       <form id='speedTypingForm'>
         <input type='text' id="speedTypingInput" [(ngModel)]="userInput" (input)="compareInput()" name="typingInput"
-          size="100" placeholder="Type the sentence above" />
+          size="100" placeholder="Type to start the game" />
       </form>
     </div>
 

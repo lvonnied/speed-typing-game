@@ -6,11 +6,12 @@ import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from '../modal/modal.component';
 import { SentencesService } from '../_services/sentences.service';
 import { StatisticsService } from '../_services/statistics.service';
+import { ProgressSpinnerMode, MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [FormsModule, CommonModule, MatButtonModule],
+  imports: [FormsModule, CommonModule, MatButtonModule, MatProgressSpinnerModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
@@ -26,6 +27,8 @@ export class HomeComponent {
   marginLeft: number = 50;
 
   interval: any = null;
+
+  mode: ProgressSpinnerMode = 'determinate';
 
   constructor(
     public dialog: MatDialog,
